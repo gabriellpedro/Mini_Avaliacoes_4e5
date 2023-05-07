@@ -4,16 +4,13 @@ from django.forms import ModelForm
 class TaskForm(ModelForm):
     class Meta:
         model = TaskModel
-        fields = ['nome_atividade','dia_atividade','mes_atividade']
+        fields = ['nome_atividade','data_atividade']
         error_messages = {
         'nome_atividade': {
-            'required': ("Informe o nome do feriado."),
+            'required': ("Informe o nome da atividade."),
         },
-        'dia_atividade': {
-            'required': ("Informe o dia do feriado."),
-        },
-        'mes_atividade': {
-            'required': ("Informe o mês do feriado."),
+        'data_atividade':{
+            'required': ("Informe a data do atividade"),
         }
     }
 

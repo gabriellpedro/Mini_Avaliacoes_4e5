@@ -13,9 +13,8 @@
         <h3>Cadastro de Atividade | To-Do List</h3>
         Nome da Atividade: {{ form_atividade.nome_atividade }}
         <br>
-        Dia da Atividade: {{ form_atividade.dia_atividade }}
-        <br>
-        Mês da Atividade: {{ form_atividade.mes_atividade }}
+        Insira a data:
+        <input type="date" value= {{ form_atividade.data_atividade }}
         <br>
         <input type="submit" value="Cadastro">
     </form>

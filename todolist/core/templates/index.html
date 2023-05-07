@@ -7,16 +7,21 @@
     <title>Home</title>
 </head>
 <body>
-    <br>    
+    <br>   
     <h1>
+        To-Do List:
+    </h1> 
+    <h2>
+        {% for atividade in nome_default %}
         <center>
-            {{ atividade }}
+            {{ atividade.nome_atividade }}
         </center>
-    </h1>
+        {% endfor %}
+    </h2>
     <br>
-    <form action={% url 'core:cadastro' %} novalidate method="GET">
-        <input type="submit" value="Cadastro"/>              
-    </form>
+    <a href="/cadastro"><button>Cadastro</button></a>
+    <br>
+    <a href="/admin"><button>Edição</button></a>
 
 </body>
 </html>

@@ -4,9 +4,9 @@ from datetime import date
 from core.models import TaskModel
 
 class AtividadeModelAdmin(admin.ModelAdmin):
-    list_display = ('nome_atividade','dia_atividade','mes_atividade','modificado_em','registrado_esse_ano')
+    list_display = ('nome_atividade','data_atividade','modificado_em','registrado_esse_ano')
     date_hierarchy = 'modificado_em'
-    search_fields = ('nome_atividade','dia_atividade', 'mes_atividade')
+    search_fields = ('nome_atividade','data_atividade')
     list_filter = ('modificado_em',)
 
     def registrado_esse_ano(self, obj):
